@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="GMAIL OTCS Link Area"
+    description="Archives any GMAIL conversation to OpenText Content Server"
+    height="20"
+    author="Didier Alves"
+    author_email="didier.alves@vilt-group.com"
+    author_location="Portugal">
+    <Require feature="dynamic-height"/>
+
+    <Require feature="google.contentmatch">
+      <Param name="extractors">
+        google.com:EmailBodyExtractor
+      </Param>
+    </Require>
+
+  </ModulePrefs>
+
+  <Content type="html" view="card">
+    <![CDATA[
+		<p><b>DIDIER RULES</b></p>
+    ]]>
+  </Content>
+</Module>
