@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ApplicationManifest xmlns="http://schemas.google.com/ApplicationManifest/2009">
+  
+  <Name>GMAIL OTCS Link</Name>
+  
+  <Description>
+    Archive any GMail conversation to OpenText Content Server.
+  </Description>
+  
+  <Extension id="GmailOtcsLinkExtractor" type="contextExtractor">
+    <Name>GMAIL OTCS Link Stuff</Name>
+    <Url>google.com:EmailBodyExtractor</Url>
+    <Triggers ref="GmailOtcsLinkGadget"/>
+    <Scope ref="emailBody"/>
+    <Container name="mail"/>
+  </Extension>
+
+  <Extension id="GmailOtcsLinkGadget" type="gadget">
+    <Name>GMAIL OTCS Link contextual gadget</Name>
+    <Url>http://www.coalitionsoft.net/context-gadget.xml</Url>
+    <Container name="mail"/>
+  </Extension>
+
+  <Scope id="emailBody">
+    <Url>tag:google.com,2010:auth/contextual/extractor/BODY</Url>
+    <Reason>
+      This application searches the message body of each email for text related to Add-in Express products.
+    </Reason>
+  </Scope>
+
+</ApplicationManifest>
